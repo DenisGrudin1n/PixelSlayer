@@ -4,7 +4,7 @@ class PlayerConstants {
   static const playerWidth = playerSpriteWidth * 3;
   static const playerHeight = playerSpriteHeight * 3;
   static const playerInitialPositionX = 0.1;
-  static const playerInitialPositionY = 0.65;
+  static const playerInitialPositionY = 0.8;
   static const playerAssetName = 'player.png';
   static const playerSpriteSheetData = {
     'row': 0,

@@ -10,7 +10,7 @@ class PlayerComponent extends SpriteAnimationComponent
   @override
   Future<void> onLoad() async {
     // Uploading sprite sheet
-    SpriteSheet spriteSheet = SpriteSheet(
+    SpriteSheet playerSpriteSheet = SpriteSheet(
       image: await gameRef.images.load(PlayerConstants.playerAssetName),
       srcSize: Vector2(
         PlayerConstants.playerSpriteWidth,
@@ -19,7 +19,7 @@ class PlayerComponent extends SpriteAnimationComponent
     );
 
     // Creating a player running animations as initial
-    animation = spriteSheet.createAnimation(
+    animation = playerSpriteSheet.createAnimation(
       row: PlayerConstants.playerSpriteSheetData['row']!.toInt(),
       stepTime: PlayerConstants.playerSpriteSheetData['stepTime']!.toDouble(),
       from: PlayerConstants.playerSpriteSheetData['from']!.toInt(),
