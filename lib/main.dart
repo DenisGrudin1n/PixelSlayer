@@ -1,13 +1,21 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flame/flame.dart';
-import 'package:flame/game.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:pixel_slayer/games/pixel_slayer_game.dart';
+import 'package:pixel_slayer/apps/pixel_slayer_app.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Flame.device.fullScreen();
-  Flame.device.setLandscape();
-  PixelSlayerGame game = PixelSlayerGame();
-  runApp(GameWidget(game: kDebugMode ? PixelSlayerGame() : game));
+  await EasyLocalization.ensureInitialized();
+
+  await Flame.device.fullScreen();
+  await Flame.device.setLandscape();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale('en'), Locale('uk')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en'),
+      child: const PixelSlayerApp(),
+    ),
+  );
 }

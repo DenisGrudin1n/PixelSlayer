@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flame/sprite.dart';
-import 'package:pixel_slayer/constants/player_constants.dart';
+import 'package:pixel_slayer/core/constants/player_constants.dart';
 import 'package:pixel_slayer/games/pixel_slayer_game.dart';
 
 class PlayerComponent extends SpriteAnimationComponent
@@ -10,7 +10,7 @@ class PlayerComponent extends SpriteAnimationComponent
   @override
   Future<void> onLoad() async {
     // Uploading sprite sheet
-    SpriteSheet playerSpriteSheet = SpriteSheet(
+    final playerSpriteSheet = SpriteSheet(
       image: await gameRef.images.load(PlayerConstants.playerAssetName),
       srcSize: Vector2(
         PlayerConstants.playerSpriteWidth,
