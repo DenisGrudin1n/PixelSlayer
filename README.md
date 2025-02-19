@@ -1,6 +1,6 @@
 # **Pixel Slayer** 🗡️🎮  
 
-**Pixel Slayer** is an in-development 2D platformer with RPG elements where you become a warrior fighting against hordes of monsters in a pixel-art world. Collect resources, upgrade your hero, explore new lands, and test your skills in an endless adventure!
+**Pixel Slayer** is an in-development 2D endless runner with RPG elements where you become a warrior fighting against hordes of monsters in a pixel-art world. Collect resources, upgrade your hero, explore new lands, and test your skills in an endless adventure!
 
 ---
 
